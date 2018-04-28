@@ -29,7 +29,7 @@ using namespace std;
 int main(){
 
         cv::FileStorage fs;  
-        cv::Mat distcalo = (cv::Mat_<double>(1,3852) << matrix_params );
+        cv::Mat distcalo = (cv::Mat_<float>(row,col) << matrix_params );
         fs.open("output_route",FileStorage::WRITE);  
         fs<<"datas"<<distcalo;
 }
